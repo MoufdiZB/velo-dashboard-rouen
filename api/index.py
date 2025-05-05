@@ -124,6 +124,7 @@ station_daily = df.groupby(['name', 'date'])[['available', 'taux_occupation']].m
 # --- 2. CRÉATION DE L'APPLICATION DASH ---
 
 app = dash.Dash(__name__, title="Dashboard Vélos Libre-Service")
+server = app.server
 app.layout = html.Div([
     html.H1("Tableau de bord – Vélos en libre-service à Rouen", style={'textAlign': 'center'}),
     html.Hr(),
